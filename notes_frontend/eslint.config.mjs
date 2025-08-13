@@ -42,7 +42,14 @@ export default [
       "@typescript-eslint": tseslint,
     },
     rules: {
-      // Your custom rules here
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": ["error", {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }]
     },
   },
 ];
